@@ -1,69 +1,89 @@
-# React + TypeScript + Vite
+# 👾 Arcade Shooter Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to _Arcade Shooter_! A retro-style browser game where you dodge falling obstacles, earn points, and test your reflexes—just like in the old-school arcade days.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎮 Features
 
-## Expanding the ESLint configuration
+- 🌌 Retro arcade theme and design
+- 👾 Custom icons for enemies (aliens, bombs, etc.)
+- 💔 Life system displayed with heart icons
+- 💯 Real-time scoring system
+- 📱 Mobile-friendly with touch support
+- 🧠 Global state management using Context API + Reducer
+- 💥 Smooth animations with Framer Motion
+- ⚙️ Built with React + TypeScript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📸 Screenshots
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+![Start Screen](./public/screenshot-start.png)
+![Gameplay](./public/screenshot-gameplay.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+---
+
+## 🚀 Getting Started
+
+### 1. Install dependencies
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Run the development server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+npm run dev
 ```
+
+The app will be available at [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/           # Icons and background assets
+├── components/       # React components (Player, Obstacles, etc.)
+├── context/          # Global game state and reducer
+├── hooks/            # Custom hooks (e.g., collision detection)
+├── pages/            # Start page, Game page
+├── styles/           # CSS Modules
+├── App.tsx           # Main app entry
+└── main.tsx          # Vite entry point
+```
+
+---
+
+## 📱 Mobile Support
+
+The game supports both keyboard and touch controls:
+
+- Swipe or tap left/right to move the player
+- Responsive layout for smaller screens
+
+---
+
+## 📦 Tech Stack
+
+- React
+- TypeScript
+- Framer Motion
+- Vite
+- CSS Modules
+- Context API + Reducer
+
+---
+
+## 🤝 Contributing
+
+Feel free to open issues or submit pull requests. Feedback and suggestions are welcome!
+
+---
+
+## 🪐 License
+
+MIT License

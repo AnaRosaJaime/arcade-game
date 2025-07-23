@@ -1,0 +1,20 @@
+.livesContainer {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+}
+
+.heart {
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  transition: transform 0.2s;
+}
+
+.full {
+  background-image: url('/heart-full.svg');
+}
+
+.empty {
+  background-image: url('/heart-empty.svg');
+}

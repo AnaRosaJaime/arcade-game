@@ -1,0 +1,7 @@
+.player {
+  width: 40px;
+  height: 40px;
+  background-image: url('/alien.svg');
+  background-size: cover;
+  transform: translateX(-50%);
+}
